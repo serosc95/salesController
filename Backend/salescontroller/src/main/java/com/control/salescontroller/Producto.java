@@ -5,57 +5,57 @@ import javax.persistence.*;
 @Entity
 @Table(name="TEST_PRODUCTO")
 public class Producto {
-    @Id
-    @Column
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @Column
-    private String Codigo;
-    @Column 
-    private String Nombre;  
-    @Column
-    private int ValorUnidad;
-    @Column
-    private int Stock;
 
-    public int getId() {
+    @Id
+    @Column(name = "IdProducto")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    @Column(name = "Codigo")
+    private String codigo;
+    @Column(name = "Nombre")
+    private String nombre;
+    @Column(name = "ValorUnidad")
+    private int valorUnidad;
+    @Column(name = "Stock")
+    private int stock;
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
     public String getCodigo() {
-        return Codigo;
+        return codigo;
     }
 
-    public void setCodigo(String Codigo) {
-        this.Codigo = Codigo;
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public int getValorUnidad() {
-        return ValorUnidad;
+        return valorUnidad;
     }
 
-    public void setValorUnidad(int ValorUnidad) {
-        this.ValorUnidad = ValorUnidad;
+    public void setValorUnidad(int valorUnidad) {
+        this.valorUnidad = valorUnidad;
     }
 
     public int getStock() {
-        return Stock;
+        return stock;
     }
 
-    public void setStock(int Stock) {
-        this.Stock = Stock;
+    public void setStock(int stock) {
+        this.stock = stock;
     }
-    
 }
