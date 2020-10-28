@@ -15,16 +15,15 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="text-center">
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+            <tr *ngFor="let producto of productos" class="text-center">
+              <td>{{producto.codigo}}</td>
+              <td>{{producto.nombre}}</td>
+              <td>{{producto.valorUnidad}}</td>
+              <td>{{producto.stock}}</td>
               <td>
-                <button class="btn btn-warning">Editar</button>
+                <button class="btn btn-outline-info">Editar</button>
               </td>
             </tr>
-            <button class="btn btn-info">Añadir</button>
           </tbody>
         </table>
       </div>

@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { ShowComponent } from './Products/show/show.component';
 import { AddComponent } from './Products/add/add.component';
 import { EditComponent } from './Products/edit/edit.component';
+import{FormsModule}from '@angular/forms';
+import{ServiceService}from '../app/Service/service.service';
+import{HttpClientModule}from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,9 @@ import { EditComponent } from './Products/edit/edit.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

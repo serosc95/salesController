@@ -50,3 +50,19 @@ header h1{
     color: #17a2b8;
     text-transform: capitalize;
 }
+header div div button{
+    margin: 0 0.5rem;
+}
+#añadir{
+    display: flex;
+    justify-content: center;
+}
+#añadir div{
+    width: 50%;
+    margin: 1rem 0;
+}
+#buttonGuardar
+{
+    display: flex;
+    justify-content: center;
+}

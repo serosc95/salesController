@@ -1,1 +1,30 @@
-<p>add works!</p>
+<div class="container col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3>Añadir producto</h3>
+      </div>
+      <div class="card-body">
+        <form action="">
+          <div class="form-group">
+            <label for="">Codigo:</label>
+            <input [(ngModel)]="producto.codigo" name="code" type="text" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="">Nombre:</label>
+            <input [(ngModel)]="producto.nombre" name="name" type="text" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="">Valor und:</label>
+            <input [(ngModel)]="producto.valorUnidad" name="value" type="text" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="">Stock:</label>
+            <input [(ngModel)]="producto.stock" name="stock" type="text" class="form-control" required>
+          </div>
+          <div class="container v-center" id="buttonGuardar">
+            <button (click)="Guardar()" class="btn btn-outline-info">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
