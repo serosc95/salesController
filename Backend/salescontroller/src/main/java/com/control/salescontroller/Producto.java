@@ -44,7 +44,7 @@ public class Producto {
     }
 
     public int getValorUnidad() {
-        return 20;
+        return valorUnidad;
     }
 
     public void setValorUnidad(int valorUnidad) {

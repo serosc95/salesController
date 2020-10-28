@@ -17,12 +17,12 @@ public class ProductoServiceImpl implements ProductoService{
 
     @Override
     public Producto listarId(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return productRepository.findAllByid(id);
     }
 
     @Override
     public Producto add(Producto p) {
-        if( productRepository.findAllByCodigo(p.getCodigo()).size() == 0) {
+        if( productRepository.findAllByCodigo(p.getCodigo()).isEmpty()) {
             return productRepository.save(p);
         }
         return null;
@@ -30,12 +30,6 @@ public class ProductoServiceImpl implements ProductoService{
 
     @Override
     public Producto edit(Producto p) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return productRepository.save(p);
     }
-
-    @Override
-    public Producto delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }

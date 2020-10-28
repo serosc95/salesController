@@ -7,5 +7,4 @@ public interface ProductoService {
     Producto listarId(int id);
     Producto add(Producto p);
     Producto edit(Producto p);
-    Producto delete(int id);
 }
