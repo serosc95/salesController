@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 public class ProductoServiceImpl implements ProductoService{
     
     @Autowired
-    private ProductoRepository repositorio;
+    private ProductoRepository productRepository;
     
     @Override
     public List<Producto> listar() {
-        return repositorio.findAll();
+        return productRepository.findAll();
     }
 
     @Override

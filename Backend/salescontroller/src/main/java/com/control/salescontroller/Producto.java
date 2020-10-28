@@ -3,20 +3,20 @@ package com.control.salescontroller;
 import javax.persistence.*;
 
 @Entity
-@Table(name="TEST_PRODUCTO")
+@Table(name = "TEST_PRODUCTO")
 public class Producto {
 
     @Id
-    @Column(name = "IdProducto")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idproducto")
     private Integer id;
-    @Column(name = "Codigo")
+    @Column(name = "codigo")
     private String codigo;
-    @Column(name = "Nombre")
+    @Column(name = "nombre")
     private String nombre;
-    @Column(name = "ValorUnidad")
+    @Column(name = "valorunidad")
     private int valorUnidad;
-    @Column(name = "Stock")
+    @Column(name = "stock")
     private int stock;
 
     public Integer getId() {

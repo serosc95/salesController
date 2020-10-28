@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(origins = "*",maxAge = 3600)
 @RestController
-@RequestMapping({"/producto"})
+@RequestMapping("producto")
 public class Controlador {
 
     @Autowired
-    ProductoService service;
+    private ProductoService service;
     
-    @GetMapping
+    @GetMapping(value = "/")
     public List<Producto>listar(){
         return service.listar();
     }
