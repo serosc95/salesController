@@ -13,28 +13,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(origins = "*",maxAge = 3600)
 @RestController
-@RequestMapping("producto")
-public class Controlador {
+@RequestMapping("cliente")
+public class ControladorCliente {
 
     @Autowired
-    private ProductoService service;
+    private ClienteService serviceC;
     
     @GetMapping(value = "/")
-    public List<Producto>listar(){
-        return service.listar();
+    public List<Cliente>listar(){
+        return serviceC.listar();
     }
-    
     @PostMapping
-    public Producto agregar(@RequestBody Producto p){
-        return service.add(p);
+    public Cliente agregar(@RequestBody Cliente p){
+        return serviceC.add(p);
     }
-    @GetMapping(path = {"/{id}"})
-    public Producto listarId(@PathVariable("id")int id){
-        return service.listarId(id);
-    }
-    @PutMapping(path = {"/{id}"})
-    public Producto editar(@RequestBody Producto p,@PathVariable("id") int id){
-        p.setId(id);
-        return service.edit(p);
-    }
+
 }
