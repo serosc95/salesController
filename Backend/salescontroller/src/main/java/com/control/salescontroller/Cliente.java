@@ -11,7 +11,7 @@ public class Cliente {
     @Column(name = "idcliente")
     private Integer id;
     @Column(name = "identificacion")
-    private int identificacion;
+     int identificacion;
     @Column(name = "nombres")
     private String nombres;
     @Column(name = "apellidos")

@@ -13,15 +13,24 @@ public class ClienteServiceImpl implements ClienteService{
     @Override
     public Cliente add(Cliente p) {
         if(clientRepository.findAllByIdentificacion(p.getIdentificacion()).isEmpty()) {
-        } else {
             return clientRepository.save(p);
+        } else {
+            return null;
         }
-        return null;
     }
 
     @Override
     public List<Cliente> listar() {
         return clientRepository.findAll();
+    }
+
+    @Override
+    public int search(Cliente p) {
+        if(clientRepository.findAllByIdentificacion(p.getIdentificacion()).isEmpty()) {
+            return 0;
+        } else {
+            return p.getIdentificacion();
+        }
     }
     
 }

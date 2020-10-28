@@ -25,7 +25,6 @@ export class ServiceService {
     return this.http.put<Producto>(this.UrlProduct+"/"+producto.id,producto);
   }
   buscarCliente(cliente:Cliente){
-    console.log(cliente);
     return this.http.post<Cliente>(this.UrlClient,cliente);
   }
 }

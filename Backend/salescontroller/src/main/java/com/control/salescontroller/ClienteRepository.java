@@ -7,5 +7,5 @@ public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
     
     List<Cliente> findAll();
     Cliente save(Cliente p);
-    Cliente findAllByIdentificacion(int identificacion);
+    List<Cliente> findAllByIdentificacion(int identificacion);
 }

@@ -24,8 +24,8 @@ public class ControladorCliente {
         return serviceC.listar();
     }
     @PostMapping
-    public Cliente agregar(@RequestBody Cliente p){
-        return serviceC.add(p);
+    int buscar(@RequestBody Cliente p){
+        return serviceC.search(p);
     }
 
 }

@@ -17,13 +17,17 @@ export class SearchComponent implements OnInit {
   }
 
   Buscar(){
+    let value;
     this.service.buscarCliente(this.cliente)
     .subscribe(data=>{
-      console.log(data);
-      if (data == null)
+      value = data;
+      if (value == 0)
         this.router.navigate(["registry"]);
       else
+      {
+        localStorage.setItem("cedula",value.toString());
         this.router.navigate(["caja"]);
+      }
     })
   }
 }

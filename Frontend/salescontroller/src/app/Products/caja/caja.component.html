@@ -1,1 +1,26 @@
-<p>caja works!</p>
+<div class="container col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3></h3>
+      </div>
+      <div class="card-body">
+        <form action="">
+            <div class="form-group">
+                <label for="">Productos</label>
+                <select class="form-control" (change)="onSelect($event.target.value)">
+                    <option *ngFor="let producto of productos" value="{{producto.codigo}}">{{producto.nombre}}</option>
+                </select>
+            </div>
+            <fieldset disabled>
+                <div class="form-group">
+                    <label for="disabledTextInput">Disabled input</label>
+                    <input type="text" id="disabledTextInput" class="form-control">
+                </div>
+            </fieldset>
+            <div class="container v-center" id="buttonGuardar">
+              <button class="btn btn-outline-info">Vender</button>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
