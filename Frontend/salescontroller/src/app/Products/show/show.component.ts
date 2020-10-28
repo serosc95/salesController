@@ -16,9 +16,15 @@ export class ShowComponent implements OnInit {
   ngOnInit() {
     this.service.getProducto()
       .subscribe(data => {
-        console.log(data);
         this.productos = data;
       });
+  }
+  Editar(producto:Producto):void{
+    localStorage.setItem("id",producto.id.toString());
+    this.router.navigate(["edit"]);
+  }
+  Add():void{
+    this.router.navigate(["add"]);
   }
 
 }

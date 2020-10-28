@@ -19,8 +19,13 @@ export class AddComponent implements OnInit {
   Guardar(){
     this.service.createProducto(this.producto)
     .subscribe(data=>{
-      alert("Se Agrego satisfactoriamente");
-      this.router.navigate(["show"]);
+      if (data == null)
+        alert("Error!!, el codigo ya existe");
+      else
+      {
+        alert("Se Agrego satisfactoriamente");
+        this.router.navigate(["show"]);
+      }
     })
   }
 }

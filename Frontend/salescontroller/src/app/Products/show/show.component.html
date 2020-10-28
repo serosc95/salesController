@@ -21,11 +21,12 @@
               <td>{{producto.valorUnidad}}</td>
               <td>{{producto.stock}}</td>
               <td>
-                <button class="btn btn-outline-info">Editar</button>
+                <button (click)="Editar(producto)" class="btn btn-outline-info">Editar</button>
               </td>
             </tr>
           </tbody>
         </table>
+        <button (click)="Add()" class="btn btn-info btn-lg btn-block">Añadir Producto</button>
       </div>
     </div>
   </div>
