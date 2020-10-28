@@ -17,4 +17,7 @@ export class AppComponent {
   Add(){
     this.router.navigate(["add"]);
   }
+  Search(){
+    this.router.navigate(["search"]);
+  }
 }

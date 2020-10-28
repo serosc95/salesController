@@ -9,13 +9,19 @@ import { EditComponent } from './Products/edit/edit.component';
 import{FormsModule}from '@angular/forms';
 import{ServiceService}from '../app/Service/service.service';
 import{HttpClientModule}from '@angular/common/http';
+import { RegistryComponent } from './Products/registry/registry.component';
+import { SearchComponent } from './Products/search/search.component';
+import { CajaComponent } from './Products/caja/caja.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowComponent,
     AddComponent,
-    EditComponent
+    EditComponent,
+    RegistryComponent,
+    SearchComponent,
+    CajaComponent
   ],
   imports: [
     BrowserModule,
