@@ -22,7 +22,10 @@ public class ProductoServiceImpl implements ProductoService{
 
     @Override
     public Producto add(Producto p) {
-        return productRepository.save(p);
+        if( productRepository.findAllByCodigo(p.getCodigo()).size() == 0) {
+            return productRepository.save(p);
+        }
+        return null;
     }
 
     @Override
